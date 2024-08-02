@@ -121,13 +121,14 @@
                             <li><a href="servicesbycategory/18.html">Home Automation</a></li>
                         </ul>
                     </li>
-                    @if(Route::get('login'))
+                    @if(Route::has('login'))
                           @auth
                             @if(Auth::user()->utype==='ADM')
                                 {{-- Admin links --}}
                                 <li class="login-form"> <a href="#" title="Register">My Account(admin)</a>
                                     <ul class="drop-down one-column hover-fade">
                                       <li><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
+                                      <li><a href="{{ route('admin.service_categories') }}">Service Categories</a></li>
                                       <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></li>
                                   </ul>
                                 </li>
