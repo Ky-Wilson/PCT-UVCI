@@ -33,7 +33,7 @@
                         <li>
                             <div class="item-service-line">
                                 <i class="fa"><a href="#"><img class="icon-img"
-                                            src="{{ asset('images/categories') }}/{{ $scategory->image }}" alt="{{ $scategory->name }}"></a></i>
+                                            src="{{ asset('images/categories') }}/{{ $scategory->image }}" alt="{{ $scategory->name }} " width="60"></a></i>
                                 <h5>{{ $scategory->name }}</h5>
                             </div>
                         </li>
