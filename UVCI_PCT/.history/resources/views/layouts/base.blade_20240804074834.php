@@ -13,7 +13,7 @@
     <link href="{{ asset('assets/css/theme-responsive.css') }}" rel="stylesheet" media="screen">
     <link href="{{ asset('assets/css/dtb/jquery.dataTables.min.css') }}" rel="stylesheet" media="screen">
     <link href="{{ asset('assets/css/select2.min.css') }}" rel="stylesheet" media="screen">
-    <link href="{{ asset('assets/css/toastr.min.css') }}" rel="stylesheet" media="screen">
+    <link href="{{ asset('assets/css/toastr.min.css') }}" rel="stylesheet" media="screen">        
     <script type="text/javascript" src="{{ asset('assets/js/jquery.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/js/jquery-ui.1.10.4.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/js/toastr.min.js') }}"></script>
@@ -129,11 +129,10 @@
                                     <ul class="drop-down one-column hover-fade">
                                       <li><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
                                       <li><a href="{{ route('admin.service_categories') }}">Service Categories</a></li>
-                                      <li><a href="{{ route('admin.all_services') }}">All Service</a></li>
                                       <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></li>
                                   </ul>
                                 </li>
-
+                                
                             @elseif(Auth::user()->utype==='SVP')
                                 {{-- Service Provider links --}}
                                 <li class="login-form"> <a href="#" title="Register">My Account(Service Provider)</a>
@@ -142,7 +141,7 @@
                                       <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></li>
                                   </ul>
                                 </li>
-
+                                
                             @else
                             {{-- Customer links --}}
                                 <li class="login-form"> <a href="#" title="Register">My Account(Customer)</a>
@@ -269,8 +268,8 @@
                             <p class="text-xs-center crtext">&copy; 2021 SurfsideMedia. All Rights Reserved.</p>
                         </div>
                     </div>
-                </div>
-            </div>
+                </div>                
+            </div>            
         </footer>
     </div>
     <script type="text/javascript" src="{{ asset('assets/js/totop/jquery.ui.totop.js') }}"></script>
