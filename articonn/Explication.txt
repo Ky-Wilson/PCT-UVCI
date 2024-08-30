@@ -1,0 +1,115 @@
+app/
+
+Contient l'essentiel de la logique métier de l'application.
+Sous-dossiers :
+Console/ : Définit les commandes Artisan personnalisées.
+Exceptions/ : Gère les exceptions personnalisées.
+Http/ : Contient les contrôleurs, les middleware et les requêtes (formulaires validés).
+Models/ : Contient les modèles Eloquent qui interagissent avec la base de données.
+bootstrap/
+
+Contient le fichier app.php qui charge le framework et configure l'application.
+Sous-dossier cache/ : Stocke les fichiers mis en cache pour améliorer les performances.
+config/
+
+Contient tous les fichiers de configuration de l'application, comme database.php, mail.php, queue.php, etc.
+database/
+
+Contient les fichiers relatifs à la base de données :
+migrations/ : Gère les versions des schémas de la base de données.
+factories/ : Définit les usines pour générer des données fictives pour le développement ou les tests.
+seeders/ : Remplit la base de données avec des données initiales.
+public/
+
+Contient le fichier index.php, point d'entrée de l'application pour toutes les requêtes HTTP.
+Contient également des fichiers publics comme les images, les CSS et les JavaScript.
+resources/
+
+Contient les ressources de vue et les fichiers frontend :
+views/ : Contient les fichiers Blade qui génèrent l'interface utilisateur.
+lang/ : Contient les fichiers de traduction.
+css/, js/, sass/ : Contient les ressources frontend à compiler.
+routes/
+
+Contient tous les fichiers de définition des routes :
+web.php : Définit les routes pour le front-end (généralement via HTTP).
+api.php : Définit les routes pour les API RESTful.
+console.php et channels.php : Gèrent les routes de console et de diffusion d'événements.
+storage/
+
+Stocke les fichiers générés par l'application, comme les logs, les fichiers temporaires, les fichiers mis en cache, etc.
+Sous-dossiers :
+app/ : Stockage des fichiers liés à l'application.
+framework/ : Contient les sessions, les vues mises en cache et autres données du framework.
+logs/ : Stocke les fichiers de log.
+tests/
+
+Contient les tests unitaires et fonctionnels de l'application.
+Sous-dossiers : Feature/ et Unit/ pour organiser les tests.
+vendor/
+
+Contient les dépendances du projet installées via Composer (bibliothèques tierces).
+Fichiers Clés à la Racine
+.env : Fichier de configuration de l'environnement (ex. paramètres de base de données, clé d'application, configurations mail, etc.).
+artisan : L'interface de ligne de commande Artisan, utilisée pour automatiser les tâches courantes (migrations, tests, etc.).
+composer.json : Fichier qui définit les dépendances du projet, les versions des bibliothèques et les scripts Composer.
+package.json : Fichier qui définit les dépendances frontend (comme les packages NPM) pour le projet.
+webpack.mix.js : Fichier de configuration pour Laravel Mix, qui compile les ressources frontend (CSS, JavaScript).
+
+
+project-root/
+│
+├── app/
+│   ├── Console/
+│   ├── Exceptions/
+│   ├── Http/
+│   │   ├── Controllers/
+│   │   ├── Middleware/
+│   ├── Models/
+│
+├── bootstrap/
+│   └── cache/
+│
+├── config/
+│
+├── database/
+│   ├── factories/
+│   ├── migrations/
+│   └── seeders/
+│
+├── public/
+│   ├── index.php
+│   └── (assets: images, css, js)
+│
+├── resources/
+│   ├── views/
+│   ├── lang/
+│   ├── css/
+│   └── js/
+│
+├── routes/
+│   ├── web.php
+│   ├── api.php
+│   ├── console.php
+│   └── channels.php
+│
+├── storage/
+│   ├── app/
+│   ├── framework/
+│   └── logs/
+│
+├── tests/
+│   ├── Feature/
+│   └── Unit/
+│
+├── vendor/
+│
+├── .env
+├── artisan
+├── composer.json
+├── package.json
+└── webpack.mix.js
+
+
+
+
